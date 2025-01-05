@@ -1,0 +1,209 @@
+# Structure complète de la partie Front-End du projet ISI Suptech
+src/
+├── assets/
+│   ├── images/
+│   │   ├── logos/
+│   │   └── icones/
+│   ├── styles/
+│   │   ├── global.css
+│   │   └── themes.css
+│   └── polices/
+├── composants/
+│   ├── commun/
+│   │   ├── Bouton/
+│   │   │   ├── index.tsx
+│   │   │   └── styles.css
+│   │   ├── Formulaire/
+│   │   │   ├── Champ.tsx
+│   │   │   ├── Select.tsx
+│   │   │   └── ValidationMessage.tsx
+│   │   ├── Disposition/
+│   │   │   ├── EnTete.tsx
+│   │   │   ├── PiedDePage.tsx
+│   │   │   └── MenuLateral.tsx
+│   │   ├── Tableau/
+│   │   │   ├── index.tsx
+│   │   │   └── Pagination.tsx
+│   │   ├── Modal/
+│   │   │   ├── index.tsx
+│   │   │   └── styles.css
+│   │   ├── Notification/
+│   │   │   ├── index.tsx
+│   │   │   └── Toast.tsx
+│   │   └── TelechargementFichier/
+│   │       ├── index.tsx
+│   │       └── ProgressBar.tsx
+│   ├── fonctionnalites/
+│   │   ├── planification/
+│   │   │   ├── Calendrier/
+│   │   │   │   ├── CalendrierProfesseur/
+│   │   │   │   │   ├── index.tsx
+│   │   │   │   │   ├── VueJournaliere.tsx
+│   │   │   │   │   ├── VueHebdomadaire.tsx
+│   │   │   │   │   └── FiltresCalendrier.tsx
+│   │   │   │   ├── CalendrierEtudiant/
+│   │   │   │   │   ├── index.tsx
+│   │   │   │   │   ├── VueJournaliere.tsx
+│   │   │   │   │   ├── VueHebdomadaire.tsx
+│   │   │   │   │   └── FiltresCalendrier.tsx
+│   │   │   │   ├── EmploiTemps/
+│   │   │   │   │   ├── index.tsx
+│   │   │   │   │   ├── VueGrille.tsx
+│   │   │   │   │   ├── VueListe.tsx
+│   │   │   │   │   └── ExportEmploiTemps.tsx
+│   │   │   │   └── commun/
+│   │   │   │       ├── EventCalendrier.tsx
+│   │   │   │       ├── LegendeCalendrier.tsx
+│   │   │   │       └── NavigationCalendrier.tsx
+│   │   │   ├── FormulairesCours/
+│   │   │   │   ├── CreationCours.tsx
+│   │   │   │   ├── ModificationCours.tsx
+│   │   │   │   └── ValidationCours.tsx
+│   │   │   └── ListeSessions/
+│   │   │       ├── index.tsx
+│   │   │       └── FiltresSessions.tsx
+│   │   ├── absences/
+│   │   │   ├── FeuillePresence/
+│   │   │   │   ├── index.tsx
+│   │   │   │   ├── ListeEtudiants.tsx
+│   │   │   │   └── ValidationPresence.tsx
+│   │   │   ├── FormulaireJustification/
+│   │   │   │   ├── index.tsx
+│   │   │   │   └── TelechargementJustificatif.tsx
+│   │   │   └── StatistiquesAbsences/
+│   │   │       ├── index.tsx
+│   │   │       ├── GraphiquesAbsences.tsx
+│   │   │       └── ExportRapport.tsx
+│   │   ├── notes/
+│   │   │   ├── SaisieNotes/
+│   │   │   │   ├── index.tsx
+│   │   │   │   ├── GrilleNotes.tsx
+│   │   │   │   └── ValidationNotes.tsx
+│   │   │   ├── Bulletin/
+│   │   │   │   ├── index.tsx
+│   │   │   │   ├── GenerationBulletin.tsx
+│   │   │   │   └── ExportBulletin.tsx
+│   │   │   └── StatistiquesNotes/
+│   │   │       ├── index.tsx
+│   │   │       └── GraphiquesPerformance.tsx
+│   │   └── utilisateurs/
+│   │       ├── ProfilEtudiant/
+│   │       │   ├── index.tsx
+│   │       │   ├── InfosPersonnelles.tsx
+│   │       │   └── ProgressionAcademique.tsx
+│   │       ├── ProfilProfesseur/
+│   │       │   ├── index.tsx
+│   │       │   ├── InfosPersonnelles.tsx
+│   │       │   └── GestionModules.tsx
+│   │       ├── ProfilAdministrateur/
+│   │       │   ├── index.tsx
+│   │       │   └── TableauBordAdmin.tsx
+│   │       └── GestionUtilisateurs/
+│   │           ├── index.tsx
+│   │           ├── ListeUtilisateurs.tsx
+│   │           └── Permissions.tsx
+│   └── pages/
+|        parametres/
+|        ├── index.tsx                 # Export principal
+|        ├── Parametres.tsx            # Composant principal
+|        ├── navigation/
+|        │   └── TabButton.tsx         # Composant bouton d'onglet
+|        └── forms/
+|            ├── AnneScolaireForm.tsx  # Formulaire année scolaire
+|            ├── ClassesForm.tsx       # Formulaire classes
+|            ├── ProfesseursForm.tsx   # Formulaire professeurs
+|            ├── ModulesForm.tsx       # Formulaire modules
+|            └── SallesForm.tsx    
+│       ├── TableauBord/
+│       │   ├── index.tsx
+│       │   └── Widgets/
+│       ├── Planification/
+│       │   ├── index.tsx
+│       │   └── GestionCours.tsx
+│       ├── Presences/
+│       │   ├── index.tsx
+│       │   └── GestionAbsences.tsx
+│       ├── Notes/
+│       │   ├── index.tsx
+│       │   └── GestionNotes.tsx
+│       └── Utilisateurs/
+│           ├── index.tsx
+│           └── Administration.tsx
+├── hooks/
+│   ├── commun/
+│   │   ├── useAuthentification.ts
+│   │   ├── useAutorisations.ts
+│   │   └── useFormulaire.ts
+│   ├── planification/
+│   │   ├── useEmploiTemps.ts
+│   │   ├── useDisponibiliteProfesseur.ts
+│   │   └── usePlanificationCours.ts
+│   ├── absences/
+│   │   ├── useGestionPresence.ts
+│   │   └── useJustification.ts
+│   └── utilisateurs/
+│       ├── useProfilUtilisateur.ts
+│       └── useGestionUtilisateur.ts
+├── services/
+│   ├── api/
+│   │   ├── client.ts
+│   │   ├── endpoints.ts
+│   │   ├── emploiTemps/
+│   │   │   ├── professeur.ts
+│   │   │   ├── etudiant.ts
+│   │   │   └── disponibilite.ts
+│   │   └── utilisateurs/
+│   │       ├── etudiant.ts
+│   │       ├── professeur.ts
+│   │       └── administrateur.ts
+│   └── domaine/
+│       ├── utilisateurs/
+│       │   ├── types.ts
+│       │   └── utils.ts
+│       └── emploiTemps/
+│           ├── types.ts
+│           └── utils.ts
+├── store/
+│   ├── slices/
+│   │   ├── authentification.ts
+│   │   ├── utilisateurs.ts
+│   │   ├── emploiTemps.ts
+│   │   ├── notes.ts
+│   │   ├── absences.ts
+│   │   └── notifications.ts
+│   ├── actions/
+│   │   ├── utilisateurs/
+│   │   ├── emploiTemps/
+│   │   ├── notes/
+│   │   └── absences/
+│   └── selectors/
+│       ├── utilisateurs/
+│       ├── emploiTemps/
+│       ├── notes/
+│       └── absences/
+├── types/
+│   ├── domaine/
+│   │   ├── utilisateurs/
+│   │   │   ├── etudiant.ts
+│   │   │   ├── professeur.ts
+│   │   │   └── administrateur.ts
+│   │   └── emploiTemps/
+│   │       ├── evenement.ts
+│   │       ├── disponibilite.ts
+│   │       └── calendrier.ts
+│   └── api/
+│       ├── utilisateurs/
+│       └── emploiTemps/
+└── utils/
+    ├── validation/
+    │   ├── formulaires.ts
+    │   └── donnees.ts
+    ├── formatage/
+    │   ├── dates.ts
+    │   └── nombres.ts
+    ├── autorisations/
+    │   ├── roles.ts
+    │   └── permissions.ts
+    └── constantes/
+        ├── routes.ts
+        └── config.ts
